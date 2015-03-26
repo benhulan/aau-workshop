@@ -1,0 +1,109 @@
+/*Fixed-width, centered column for site content.*/
+.container {
+  position: relative;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1rem;
+  padding-right: 1rem;
+  clear: both;
+}
+
+.container:before {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  display: table;
+  clear: both;
+}
+
+/*Grid system
+Create rows with `.columns` to clear the floated columns */
+
+.columns {
+  width: 100%;
+  overflow: hidden;
+}
+
+.columns:before {
+  display: table;
+  content: " ";
+ }
+
+.columns:after {
+  display: table;
+  clear: both;
+}
+
+/*Base class for every column (requires a column width from below)*/
+.column {
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* #Media Queries
+================================================== */
+@media screen and (min-width: 700px) {
+  /*Column widths*/
+  .one-third {
+    width: 33%;
+  }
+
+  .two-thirds {
+    width: 67%;
+  }
+
+  .one-fourth {
+    width: 25%;
+  }
+
+  .one-half {
+    width: 50%;
+  }
+
+  .three-fourths {
+    width: 75%;
+  }
+
+  .one-fifth {
+    width: 20%;
+  }
+
+  .four-fifths {
+    width: 80%;
+  }
+
+  /*Equal width columns via table sorcery.*/
+  .table-column {
+    display: table-cell;
+    width: 1%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    vertical-align: top;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  } 
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  } 
+}
+
+@media screen and (min-width: 1100px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: 1400px;
+  }
+}
